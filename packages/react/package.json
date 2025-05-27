@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "@ai-sdk/provider-utils": "2.2.8",
-    "@ai-sdk/ui-utils": "1.2.11",
+    "@ai-sdk/ui-utils": "github:gauravdhiman/ai#multi-text-parts:packages/ui-utils",
     "swr": "^2.2.5",
     "throttleit": "2.1.0"
   },

@@ -138,15 +138,21 @@ export async function processChatResponse({
   await processDataStream({
     stream,
     onTextPart(value) {
-      if (currentTextPart == null) {
-        currentTextPart = {
-          type: 'text',
-          text: value,
-        };
-        message.parts.push(currentTextPart);
-      } else {
-        currentTextPart.text += value;
-      }
+      currentTextPart = {
+        type: 'text',
+        text: value,
+      };
+      message.parts.push(currentTextPart);
+
+      // if (currentTextPart == null) {
+      //   currentTextPart = {
+      //     type: 'text',
+      //     text: value,
+      //   };
+      //   message.parts.push(currentTextPart);
+      // } else {
+      //   currentTextPart.text += value;
+      // }
 
       message.content += value;
       execUpdate();
